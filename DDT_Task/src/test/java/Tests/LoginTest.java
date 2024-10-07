@@ -45,8 +45,9 @@ public class LoginTest {
 
         // Use URL from config file
         Properties prop =
-                Read_Properties("D:\\TaskAutomation\\Task\\src\\main\\resources" +
+                Read_Properties("D:\\Mahmoud\\Data_Driven\\DDT_Task\\src\\main\\resources" +
                 "\\ConfigFiles.properties");
+        System.out.println( "this is url: "+ prop.getProperty("url"));
         driver.get(prop.getProperty("url"));
 
 
@@ -80,7 +81,7 @@ public class LoginTest {
         if (result.getStatus() == ITestResult.FAILURE) {
 
             // Get screenshot directory from config file
-            Properties prop =  Read_Properties("D:\\TaskAutomation\\Task\\src\\main\\resources" +
+            Properties prop =  Read_Properties("D:\\Mahmoud\\Data_Driven\\DDT_Task\\src\\main\\resources" +
                     "\\ConfigFiles.properties");
             screenShot.
                     takeScreenShot(prop.getProperty("filePath"));
